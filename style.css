@@ -1,0 +1,89 @@
+@font-face {
+    font-family: f;
+    src: url('./fonts/Bruce\ Forever.ttf');
+}
+
+body {
+    min-width: 950px;
+    background-color: RGB(24, 32, 48);
+    color: rgb(226, 59, 59);
+}
+
+.box {
+    z-index: 0;
+    background-color: black;
+    width: 900px;
+    height: 600px;
+    border: 1px solid white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.game-title {
+    font: 50px f;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    transform: translate(-20%);
+    white-space: nowrap;
+}
+
+.instructions {
+    font: 17px f;
+
+    position: absolute;
+    top: 30%;
+    left: 42%;
+    transform: translate(-40%);
+}
+
+.instructions p {
+    text-align: center;
+}
+
+.start-game {
+    font: 15px f;
+    position: absolute;
+    top: 80%;
+    left: 47%;
+    transform: translate(-50%);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+@keyframes flash {
+    50% {
+      opacity: 0.3;
+    }
+  }
+.hidden {
+    opacity: 0.2;
+}
+
+/* img { 
+    position: absolute;
+ } */
+
+.game {
+    will-change: transform;
+}
+
+.enemies {
+    position: relative; 
+    will-change: transform;
+    width: 400px; 
+    height: auto;
+}
+
+.ship {
+    position: absolute;
+    transition: transform 0.05s;
+  }
+  .fire {
+    position: absolute;
+    background-color: red;
+    width: 5px;
+    height: 10px;
+  }
+  
